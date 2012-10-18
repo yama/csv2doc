@@ -1168,17 +1168,17 @@ class Csv2Doc {
 	function section_header($title) {
 	global $modx;
 		$theme_path = MODX_BASE_URL . 'manager/media/style/' . $modx->config["manager_theme"] . '/';
-		$tags  = '<style type=text/css>' . PHP_EOL;
+		$tags  = '<style type=text/css>' . "\n";
 		$tags .= 'input.inputBox {';
 		$tags .= 'background: #fff url(' . $theme_path . 'images/misc/input-bg.gif) repeat-x top left;';
-		$tags .= '}' . PHP_EOL;
+		$tags .= '}' . "\n";
 		$tags .= 'table {';
 		$tags .= 'border-collapse:collapse;border:none;';
-		$tags .= '}' . PHP_EOL;
+		$tags .= '}' . "\n";
 		$tags .= 'table td {';
 		$tags .= 'border:1px solid#ccc;padding:4px;';
-		$tags .= '}' . PHP_EOL;
-		$tags .= '</style>' . PHP_EOL;
+		$tags .= '}' . "\n";
+		$tags .= '</style>' . "\n";
 
 		$tags .= '<div class="section">';
 		$tags .= '<div class="sectionHeader">'.$title.'</div>';
