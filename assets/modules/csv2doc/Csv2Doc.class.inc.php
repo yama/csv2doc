@@ -1180,11 +1180,13 @@ class Csv2Doc {
 		$tags .= '}' . PHP_EOL;
 		$tags .= '</style>' . PHP_EOL;
 
+		$tags .= '<div class="section">';
 		$tags .= '<div class="sectionHeader">'.$title.'</div>';
 		$tags .= '<div class="sectionBody">'."\n";
 		return $tags;
 	}
 	function section_footer() {
+		$tags = "</div>\n";
 		$tags = "</div>\n";
 		return $tags;
 	}
