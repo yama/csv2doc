@@ -1,6 +1,6 @@
 //<?php
 /**
- * Csv2Doc MODx module - module
+ * Csv2Doc MODX module - module
  *
  * @package Csv2Doc
  * @author Kazuyuki Ikeda (HIKIDAS Co.,Ltd)	
@@ -14,7 +14,7 @@ global	$manager_language;
 global	$_style;
 global	$modx_textdir, $modx_manager_charset, $modx_lang_attribute;
 //----
-include_once "header.inc.php";	// The common header of the MODx manager
+include_once "header.inc.php";	// The common header of the MODX manager
 
 global	$modx, $default_template;
 
@@ -70,9 +70,9 @@ $params->add('csv_enclosure',
 $params->add('csv_maxreclen',
 	new nParam('行最大長', 40960));
 $params->add('sys_encoding',
-	new tParam('MODxのエンコーディング', 'UTF-8'));
+	new tParam('MODXのエンコーディング', 'UTF-8'));
 $params->add('sys_locale',
-	new tParam('MODxのロケール', 'ja_JP.UTF-8'));
+	new tParam('MODXのロケール', 'ja_JP.UTF-8'));
 $params->add('parent_alias_fieldname',
 	new tParam('ドキュメントを作成するフォルダのエイリアス用フィールド名'));
 	// これを指定した場合、doc_parent直下でエイリアスを探す。
@@ -216,7 +216,7 @@ $params->add('records_gen_param',
 $params->add('records_gen_cols',
 	new nParam('データレコード一覧・タグ生成列数'));
 
-// Set configuration variables (from the control panel of MODx manager)
+// Set configuration variables (from the control panel of MODX manager)
 $params->set_configuration(compact($params->keys()));
 
 //----
@@ -230,5 +230,5 @@ if (! $modx->hasPermission('save_document')) {
 	$csv2doc->execute();
 }
 
-include_once "footer.inc.php";	// The common footer of the MODx manager
+include_once "footer.inc.php";	// The common footer of the MODX manager
 
