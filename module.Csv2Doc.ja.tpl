@@ -14,11 +14,11 @@ global	$manager_language;
 global	$_style;
 global	$modx_textdir, $modx_manager_charset, $modx_lang_attribute;
 //----
-include_once "header.inc.php";	// The common header of the MODX manager
+include_once MODX_MANAGER_PATH . 'actions/header.inc.php'; // The common header of the MODX manager
 
 global	$modx, $default_template;
 
-$modulePath = $modx->config['base_path'].'assets/modules/csv2doc/';
+$modulePath = MODX_BASE_PATH.'assets/modules/csv2doc/';
 include_once $modulePath.'Csv2Doc.class.inc.php';
 include_once $modulePath.'HTMLblock.class.inc.php';
 include_once $modulePath.'Parameter.class.inc.php';
@@ -230,5 +230,5 @@ if (! $modx->hasPermission('save_document')) {
 	$csv2doc->execute();
 }
 
-include_once "footer.inc.php";	// The common footer of the MODX manager
+include_once MODX_MANAGER_PATH . 'actions/footer.inc.php'; // The common footer of the MODX manager
 
