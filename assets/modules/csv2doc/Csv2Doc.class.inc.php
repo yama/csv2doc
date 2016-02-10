@@ -1515,4 +1515,3 @@ function &mb_encode_list() {
 		"KOI8-R",
 	);
 }
-?>
