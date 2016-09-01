@@ -53,7 +53,7 @@ class HTMLblock {
 		constructor & initializers
 	*******************************************************************/
 	// constructor
-	function HTMLblock($num_cols=0, $block_attrs=NULL, $row_attrs=NULL, $col_attrs=NULL, $charset=NULL) {
+	function __construct($num_cols=0, $block_attrs=NULL, $row_attrs=NULL, $col_attrs=NULL, $charset=NULL) {
 		$this->initCharset($charset);
 		$this->initSettings($num_cols, $block_attrs, $row_attrs, $col_attrs);
 		$this->initBlock();

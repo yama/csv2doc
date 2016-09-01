@@ -53,7 +53,7 @@ class Csv2Doc {
 
 	//==================================================================
 	// Constructor
-	function Csv2Doc(&$params) {
+	function __construct(&$params) {
 		global	$modx;
 		$this->params =& $params;
 		$this->completed = FALSE;
@@ -1239,7 +1239,7 @@ class Csv {
 
 	//==================================================================
 	// Constructor
-	function Csv(&$params) {
+	function __construct(&$params) {
 		$this->params =& $params;
 		$this->setLocale();
 	}

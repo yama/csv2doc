@@ -12,7 +12,7 @@
 class ParamContainer {
 	var	$elements;
 
-	function ParamContainer() {
+	function __construct() {
 		$this->elements = array();
 	}
 
@@ -66,7 +66,7 @@ class tParam {
 	var	$title;
 	var	$val;
 	var	$opt_list;
-	function tParam($title='', $val='') {
+	function __construct($title='', $val='') {
 		$this->title = $title;
 		$this->val = $val;
 	}
@@ -95,8 +95,8 @@ class tParam {
 //======================================================================
 //	flag
 class fParam extends tParam {
-	function fParam($title='', $val='') {
-		parent::tParam($title, $val);
+	function __construct($title='', $val='') {
+		parent::__construct($title, $val);
 		$this->opt_list = array(
 			'Yes'	=>	1,
 			'No'	=>	0,
