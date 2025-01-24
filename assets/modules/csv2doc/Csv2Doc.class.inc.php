@@ -106,7 +106,7 @@ class Csv2Doc {
 				$this->deletebrothers();
 			}
 			if ($this->completed) {
-				$this->clear_cache();
+				evo()->clearCache();
 				$this->reload();
 			}
 		}
@@ -1205,19 +1205,6 @@ class Csv2Doc {
 		echo $this->conf_brothers_tags;
 		echo $this->conf_fields_tags;
 		echo $this->conf_records_tags;
-	}
-
-	//==================================================================
-	// clear cache
-	function clear_cache() {
-		global $modx;
-		$basePath = $modx->config['base_path'];
-		// empty cache
-		include_once $basePath."/manager/processors/cache_sync.class.processor.php";
-		$sync = new synccache();
-		$sync->setCachepath($basePath.'/assets/cache/');
-		$sync->setReport(false);
-		$sync->emptyCache(); // first empty the cache
 	}
 
 	//==================================================================
