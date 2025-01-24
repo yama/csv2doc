@@ -53,6 +53,23 @@ class Csv2Doc
     var $fields_gen;    // フィールド一覧・タグ生成オブジェクト
     var $records_gen;    // データレコード一覧・タグ生成オブジェクト
 
+    var $tbl_content; // ドキュメントテーブル
+    var $tbl_tmplvars; // テンプレート変数テーブル
+    var $tbl_tmplvar_contvals; // テンプレート変数の値テーブル
+    var $meta_content; // メタデータ
+    var $docvars_fidx; // ドキュメント変数名 => フィールド添字
+    var $tmplvars_fidx; // テンプレート変数ID => フィールド添字
+    var $tmplvars_fnames; // テンプレート変数名 => フィールド添字
+    var $nl2br; // 改行を<br>に変換するかどうかのフラグ
+    var $nl2br_fieldnames; // 改行を<br>に変換するフィールド名配列
+    var $conf_fields_tags; // フィールドタグ
+    var $conf_records_tags; // レコードタグ
+    var $conf_brothers_tags; // 兄弟タグ
+    var $form_tags; // フォームタグ
+    var $runparams; // 実行パラメータ
+    var $verify_cols; // 確認表示列数
+    public $csv; // CSVファイル操作オブジェクト
+
     //==================================================================
     // Constructor
     function __construct(&$params)
