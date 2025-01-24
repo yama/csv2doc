@@ -74,7 +74,6 @@ class Csv2Doc
     // Constructor
     function __construct(&$params)
     {
-        global    $modx;
         $this->params = &$params;
         $this->completed = FALSE;
     }
@@ -1042,7 +1041,6 @@ class Csv2Doc
     //==================================================================
     function update_csv_tmplvar_contvals_each()
     {
-        global    $modx;
         $ret = TRUE;
         foreach ($this->ids as $docid) {
             if (! $this->update_csv_tmplvar_contvals($docid)) {
@@ -1055,7 +1053,6 @@ class Csv2Doc
     //==================================================================
     function update_csv_tmplvar_contvals($docid)
     {
-        global    $modx;
         $ret = TRUE;
         foreach ($this->tmplvars_fnames as $fn) {
             $tmplvarid = $this->tmplvars_id[$fn];
@@ -1166,7 +1163,6 @@ class Csv2Doc
     //==================================================================
     function deletebrothers()
     {
-        global    $modx;
         $this->tag_gen_brothers_title();
         $this->brothers_gen->nextRow();
 
