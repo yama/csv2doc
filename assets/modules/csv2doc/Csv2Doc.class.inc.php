@@ -1260,7 +1260,7 @@ class Csv2Doc
     function section_header($title)
     {
         global $modx;
-        $theme_path = MODX_BASE_URL . 'manager/media/style/' . $modx->config["manager_theme"] . '/';
+        $theme_path = $modx->config('base_path') . 'manager/media/style/' . $modx->config["manager_theme"] . '/';
         $tags  = '<style type=text/css>' . "\n";
         $tags .= 'input.inputBox {';
         $tags .= 'background: #fff url(' . $theme_path . 'images/misc/input-bg.gif) repeat-x top left;';
